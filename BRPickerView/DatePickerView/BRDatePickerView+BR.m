@@ -32,7 +32,7 @@ BRSYNTH_DUMMY_CLASS(BRDatePickerView_BR)
         } else if (self.pickerMode == BRDatePickerModeMS) {
             minDate = [NSDate br_setMinute:0 second:0];
         } else {
-            minDate = [NSDate distantPast]; // 遥远的过去的一个时间点
+            minDate = [NSDate dateWithTimeIntervalSince1970:0]; // 遥远的过去的一个时间点
         }
     }
     return minDate;
